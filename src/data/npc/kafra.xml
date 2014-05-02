@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes" ?>
+<!DOCTYPE NPCDATA [
+<!ELEMENT NPCDATA (NPC*)>
+<!ELEMENT NPC (ACT*)>
+<!ELEMENT 
+]>
+<foo>
+   <element attrib="value"/>
+   <name>nom</name>
+</foo>

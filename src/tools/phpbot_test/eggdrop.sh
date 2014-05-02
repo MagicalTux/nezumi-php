@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/local/php-cgi/bin/php -q core.php >/dev/null 2>&1 &
+echo Started in background ...

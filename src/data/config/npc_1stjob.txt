@@ -1,0 +1,578 @@
+// JOB NPC
+
+//Swordman job change
+izlude_in.gat,74,172,5	script	Sword Master	119,{
+mes "[Swordman]";
+mes "Welcome to the Swordman Association.";
+mes "So you want to be a Swordman?";
+next;
+menu "Yes",Lyes,"No",Lno;
+	Lyes:
+		mes "[Swordman]";
+		mes "First, you must learn Basic Skill until Level 9. If you can't qualify this condition, you won't be able to become anything.";
+		next;
+
+		if(joblevel<10) goto LnoLvl;
+
+		mes "[Swordman]";
+		mes "Become a Swordman will not be that easy. You will need to pass through a test with 3 levels.";
+		mes "Do you want to subscribe to the test?";
+		menu "Yes",LyesB,"No",Lno;
+
+			LyesB:
+				if(getjob==Job_Novice) goto GoToMission;
+				mes "You must be kidding me! You already have a job.";
+				close;
+	Lno:
+		mes "[Sword Master]";
+		mes "Thank you for your interesting.";
+		close;
+
+	LnoLvl:
+		mes "[Sword Master]";
+		mes "Oh, you can't qualify the required conditions to become a Swordman. Come back later.";
+		close;
+
+	GoToMission:
+		jobchange Job_Swordman;
+		warp "sword_1-1.gat",12,244;
+		close;
+
+close; }
+
+//Archer
+
+payon_in02.gat,65,71,2	script	Archer	88,{
+if(getjob!=Job_Novice) goto LOtherjobs;
+mes "[Archer]";
+mes "Welcome to Payon, traveller";
+mes "So, have you decided if you want to be an archer?";
+menu "Yes, I choose to be an archer!",LArcherChoose,"No, I have not decided yet",LEndCancel;
+	LArcherChoose:
+		if(joblevel<10) goto LNotQualified;
+		if(getjob !=Job_Novice) goto LNotNovice;
+		mes "[Archer]";
+		mes "That's nice... but do you think you can be an archer that easily?";
+		mes "First, I need you to collect some trunks.";
+		menu "I've got them!",LCheckItems,"What trunks?",LTrunkInfo,"Err, I've changed my mind",LEndCancel;
+		close;
+	LCheckItems:
+		if(countitem(1066)<1) goto Lnotenoughtrunks;
+		if(countitem(1067)<1) goto Lnotenoughtrunks;
+		if(countitem(1068)<1) goto Lnotenoughtrunks;
+		mes "Congratulations on passing the test! You are now an archer!";
+		jobchange Job_Archer;
+		set joblevel,1;
+		delitem 1066,1;
+		delitem 1067,1;
+		delitem 1068,1;
+		close;
+	Lnotenoughtrunks:
+		mes "Sorry, you've not gotten what I asked you to get.";
+		mes "Come back again when you find all the trunks.";
+		mes "Willows drop trunks, if you forgot.";
+		close;
+	LTrunkInfo:
+		mes "[Archer]";
+		mes "First, I need you to collect some trunks.";
+		next;
+		mes "1 Solid Trunk, 1 Barren Trunk and 1 Fine Grained Trunk will do.";
+		next;
+		mes "Come back to me once you've completed gathering those 3 trunks";
+		next;
+		mes "Hint: The trunks are dropped by a monster called Willow";
+		next;
+		close;
+	LEndCancel:
+		mes "Well, come back and tell me if you've decided to be an archer!";
+		close;
+	LNotQualified:
+		mes "[Archer]";
+		mes "Sorry, but you don't qualify for the basic requirements of being an archer...";
+		mes "You need to have acquired Basic Skills Level 9 first";
+		mes "Come back again when you have that, okay?";
+		close;
+	LOtherjobs:
+		mes "[Archer]";
+		mes "Welcome to Payon, traveller";
+		mes "This is the place where you apply to be an archer, but you've already another job";
+		mes "Wish you good luck in your job!";
+		close;
+close;	}
+
+//Mage job change NPC 1
+geffen_in.gat,164,124,2	script	Guildsman	120,{
+mes "[Guildsman]";
+mes "Hello there wonderer. You came to sign up for the mage job?";
+next;
+menu "Yes",LyesA,"No",LnoA;
+		LyesA:
+			mes "[Guildsman]";
+			mes "Have you made the solution?";
+			menu "Yes",LyesB,"No",LnoB;
+			close;
+
+		LyesB:
+			if(getjob !=Job_Novice) goto LNotNovice;
+			if(joblevel<10) goto LnoLvl;
+			if(countitem(1089)<1) goto Llessitem;
+
+			mes "[Guildsman]";
+			mes "Thank you for the solution, you have proven your skills and will become a Mage.";
+
+			jobchange Job_Mage;
+			delitem 1089,1;
+			close;
+		LnoB:
+			if(getjob !=Job_Novice) goto LNotNovice;
+			mes "[Guildsman]";
+			mes "You need to be on Job level 10 and ";
+			mes "I will need to test your skills, so you must find some itens and make a solution for me.";
+			next;
+			mes "[Guildsman]";
+			mes "The itens you will need are:";
+			mes "Jellopy 2ea, Fluff 3ea, Milk 1ea and an Payon Solution from the";
+			mes "Archer Village, Mixing machine of Payon.";
+			mes "To complete your quest you must mix them at the Mixing Machine and enter this";
+			mes "Code: 8472.";
+			mes "Please remember it and bring the solution back to me.";
+			close;
+		LnoA:
+			mes "[Guildsman]";
+			mes "Thank you for your interesting.";
+			close;
+
+		LnoLvl:
+			mes "[Guildsman]";
+			mes "Oh, you does not have can't qualify the required conditions to become a Mage. You need Job Skill at level 10 before trying to become a Mage. Come back later.";
+			close;
+		Llessitem:
+			mes "[Guildsman]";
+			mes "Come back when you make the solution.";
+			mes "The itens you will need are:";
+			mes "Jellopy 2ea, Fluff 3ea, Milk 1ea and an Aqueous Solution from the";
+			mes "Archer Village, Payon.";
+			mes "To complete your quest you must mix them at the Mixing Machine and enter this";
+			mes "Code: 8472.";
+			mes "Please remember it and bring the solution back to me.";
+			close;
+		LNotNovice:
+			mes "You must be kidding me! You already have a job.";
+			close;
+close; }
+
+//Mage job change NPC 2
+payon_in02.gat,86,29,1	script	Aqueur-Alquimist	54,{
+mes "[Solution Maker]";
+mes "Searching needed items...";
+next;
+if(getjob !=Job_Novice) goto LNotNovice;
+if(countitem(909)<2) goto Llessitem0;
+if(countitem(914)<3) goto Llessitem1;
+if(countitem(519)<1) goto Llessitem2;
+mes "Mixing completed successful.";
+next;
+getitem 1089,1;
+close;
+
+	Llessitem0:
+		mes "Not enough Jellopy.";
+		close;
+	Llessitem1:
+		mes "Not enough Fluff.";
+		close;
+	Llessitem2:
+		mes "Not enough Milk.";
+		close;
+	LNotNovice:
+		mes "Sorry this machine is only for novices.";
+		close;
+close; }
+
+//Thief job change
+moc_prydb1.gat,46,130,0	script	Thief Guildsman	117,{
+mes "[Thief Guildsman]";
+mes "Hey baby, you came here for the Thief job?";
+next;
+menu "Yes",LyesA,"No",LnoA;
+	LyesA:
+		if(getjob!=Job_Novice) goto NotNovice;
+		mes "[Thief Guildsman]";
+		mes "Have you found the Mushrooms?";
+		menu "Yes",LyesB,"No",LnoB;
+		LyesB:
+			if(joblevel<10) goto LnoLvl;
+			if(countitem(1069)<1) goto Llessitem;
+			if(countitem(1070)<1) goto Llessitem;
+
+			mes "[Thief Guildsman]";
+			mes "Thank you for the Mushrooms, as I promised, you will become a Thief.";
+
+			jobchange Job_Thief;
+			close;
+		LnoB:
+			if(getjob!=Job_Novice) goto Lnojob;
+			getitem 1069,1;
+			next;
+			mes "[Thief Guildsman]";
+			mes "You will need to collect some mushrooms for me.";
+			mes "These are no ordinary mushrooms, you need to find The Orange Govey Mushroom and";
+			mes "The Orange Net Mushroom.";
+			mes "Go outside the pyramids and talk to the NPC guild";
+			mes "he can warp you where the mushrooms are.";
+			mes "Come and see me when you have all the musrooms.";
+			close;
+		LnoA:
+			mes "[Thief Guildsman]";
+			mes "Thank you for your interesting.";
+			close;
+
+		Lnojob:
+			mes "You already have an job buddy.";
+			close;
+
+		LnoLvl:
+			mes "[Thief Guildsman]";
+			mes "Oh, you does not have can't qualify the required conditions to become a Thief. You need Job Skill at level 10 before trying to become a Thief. Come back later.";
+			next;
+			close;
+	Llessitem:
+			mes "[Thief Guildsman]";
+			mes "Come back when you found the Mushrooms.";
+			mes "These are no ordinary mushrooms, you need to find The Orange Govey Mushroom and";
+			mes "The Orange Net Mushroom.";
+			mes "Go outside the pyramids and talk to the NPC guild";
+			mes "he can warp you where the mushrooms are.";
+			next;
+			close;
+	NotNovice:
+			mes "You must be kidding me! You already have a job.";
+			close;
+close; }
+
+//ThiefQuest 2nd NPC
+moc_ruins.gat,99,118,4	script	Strange Man	54,{
+	if(countitem(1069)>0) goto Linqst;
+	goto Lnotqst;
+	Linqst:
+		mes "Ah ha! So I see that you are the fool who is here for the theif exam.";
+		mes "Yes, I can get you into the garden. Hahaha.";
+		mes "Good Luck buddy.";
+		next;
+		warp "job_thief1.gat",38,323;
+	close;
+	Lnotqst:
+		mes "I have nothing to say to you.";
+		mes "if you are looking for thief quest.";
+		mes "find the first npc on pyramides and,";
+		mes "come back here buddy :P";
+
+close; }
+
+//Merchant job change NPC 1
+alberta_in.gat,53,44,2	script	Merchant Guild	88,{
+mes "[NPC Guild]";
+mes "Hi there! Are you here for the Merchant job?";
+next;
+menu "Yes",LyesA,"No",LnoA;
+	LyesA:
+		mes "[NPC Guild]";
+		mes "Do you have the Voucher?";
+		menu "Yes",LyesB,"No",LnoB;
+		close;
+		LyesB:
+			if(getjob !=Job_Novice) goto LNotNovice;
+			if(joblevel<10) goto LnoLvl;
+			if(countitem(1073)<1) goto Llessitem;
+
+			mes "Oh, you already have the Voucher. Now you will become a Merchant.";
+
+			jobchange Job_Merchant;
+			delitem 1073,1;
+			close;
+		LnoB:
+			mes "Okay, now you need to pay me 1000z for this quest.";
+			next;
+			menu "Agree",Lagree,"Disagree",Ldisagree;
+
+			Lagree:
+				if(Zeny<1000) goto NoGold;
+				set Zeny,0-1000;
+
+				mes "[NPC Guild]";
+				mes "Okay now go talk to the Guildsman on the other room. He will give you a quest.";
+				close;
+
+			Ldisagree:
+				goto LnoA;
+		LnoA:
+			mes "[NPC Guild]";
+			mes "Thank you for your interesting.";
+			close;
+	NoGold:
+		mes "[NPC Guild]";
+		mes "You need 1000z to do this quest. Come back later.";
+		close;
+
+	LnoLvl:
+		mes "[NPC Guild]";
+		mes "Oh, you does not have can't qualify the required conditions to become a Merchant. You need Job Skill at level 10 before trying to become a Merchant. Come back later.";
+		close;
+
+	Llessitem:
+		mes "[NPC Guild]";
+		mes "You don't have the Voucher. You need the Voucher to become a Merchant.";
+		mes "Go talk to the Guildsman on the other room. He will give you a quest.";
+		close;
+	LNotNovice:
+		mes "sorry you need to be a novice to do it";
+		close;
+close; }
+
+//Merchat job change NPC 2
+alberta_in.gat,27,58,0	script	Guildman	88,{
+mes "[Guildman]";
+mes "Hi, so you came for the delivery right?";
+next;
+menu "Yes",Lyes,"No",Lno;
+	Lyes:
+		if(getjob!=Job_Novice) goto LNotNovice;
+
+		mes "[Guildman]";
+		mes "Okay then, I need you to deviler this boxes to the Town of Izlude.";
+		mes "Go to the Weapons and Armor shop and deliver them to the man at the entrance.";
+		next;
+
+		if(countitem(1081)<1) goto Get1;
+		if(countitem(1082)<1) goto Get2;
+		if(countitem(1083)<1) goto Get3;
+		if(countitem(1091)<1) goto Get4;
+
+		mes "[Guildman]";
+		mes "When you get the Voucher go see the first NPC at the entrance of this building.";
+		mes "He will turn you into a Merchant.";
+		close;
+	Lno:
+		mes "[Guildman]";
+		mes "Oh sorry wrong guy.";
+		close;
+
+	Get1:
+		getitem 1081,1;
+	Get2:
+		getitem 1082,1;
+	Get3:
+		getitem 1083,1;
+	Get4:
+		getitem 1091,1;
+	LNotNovice:
+		mes "You must be kidding me! You already have a job.";
+		close;
+close; }
+
+//Merchat job change NPC 3
+izlude_in.gat,71,103,0	script	Merchant	156,{
+mes "[Merchant]";
+mes "Hi, are you the delivery man?";
+next;
+menu "Yes",Lyes,"No",Lno;
+	Lyes:
+		if(countitem(1081)<1) goto Llessitem;
+		if(countitem(1082)<1) goto Llessitem;
+		if(countitem(1083)<1) goto Llessitem;
+		if(countitem(1091)<1) goto Llessitem;
+
+		mes "[Merchant]";
+		mes "Thank you for the delivery. Take this Voucher back to the NPC Guild.";
+
+		delitem 1081,1;
+		delitem 1082,1;
+		delitem 1083,1;
+		delitem 1091,1;
+
+		getitem 1073,1;
+		close;
+	Lno:
+		mes "[Merchant]";
+		mes "Sorry wrong guy.";
+		close;
+
+	Llessitem:
+		mes "[Merchant]";
+		mes "Sorry, you don't have all the packages needed.";
+		close;
+close; }
+
+//Acolyte Job Change NPC 1
+prt_church.gat,184,41,4	script	Cleric	60,{
+	if(countitem(1009)>0) goto LChange;
+	if(countitem(7015)>0) goto LStill1;
+	if(countitem(7023)>0) goto LStill3;
+	if(countitem(7024)>0) goto LStill2;
+	mes "[Father Mareusis]";
+	mes "What is it my son?";
+	next;
+	menu "Father, I want to be an Acolyte.",LCheck,"Requirements.",LInfo,"I'm just looking around.",LCancel;
+
+LCheck:
+	if(joblevel<10) goto LDenny;
+	if(getjob!=Job_Novice) goto LNotNovice;
+	goto LProceed;
+
+LProceed:	mes "[Father Mareusis]";
+		mes "Right my son,";
+		mes "So you heard the call of god.";
+		mes "Let me explain what you have to do.";
+		next;
+		mes "[Father Mareusis]";
+		mes "I have 3 errands for you to choose,complete 1 of these errands to show your faith, and if you truly qualify to be an Acolyte of this church.";
+		next;
+		mes "[Father Mareusis]";
+		mes "Please choose wich errand you want to take.";
+		next;
+		menu "Errand #1.",LErrand1,"Errand #2.",LErrand2,"Errand #3.",LErrand3;
+
+	LErrand1:
+			mes "[Father Mareusis]";
+			mes "So you choose the #1, very well.";
+			mes "Here is what you have to do...";
+			next;
+			getitem 7015,1;
+			mes "[Father Mareusis]";
+			mes "Give this Bookclip to ^000077Father Rubalkabara^000000, he's a member of the Prontera Parish and is practicing asceticism in the ^000077Relics at the Nothern East of Prontera City^000000.";
+			mes "May god bless you on your way.";
+			close;
+
+	LErrand2:
+			mes "[Father Mareusis]";
+			mes "So you choose the #2, very well.";
+			mes "Here is what you have to do...";
+			next;
+			getitem 7023,1;
+			mes "[Father Mareusis]";
+			mes "Give this blade to ^000077Mother Mathilda^000000 purify, she been practicing asceticism ^000077near Morroc Town, the Southern West of Prontera City^000000.";
+			mes "May god bless you on your way.";
+			close;
+
+	LErrand3:
+			mes "[Father Mareusis]";
+			mes "So you choose the #3, very well.";
+			mes "Here is what you have to do...";
+			next;
+			getitem 7023,1;
+			mes "[Father Mareusis]";
+			mes "Give this blade to ^000077Father Yosuke^000000 purify, he has been practicing asceticism ^000077around a Bridge in Somewhere near Northern West Prontera^000000.";
+			mes "May god bless you on your way.";
+			close;
+
+
+LStill1:
+	mes "[Father Mareusis]";
+	mes "Go see ^000077Father Rubalkabara in the Relics at the Northern East of Prontera City^000000.";
+	mes "May god aid you on your guest.";
+	close;
+
+LStill2:
+	mes "[Father Mareusis]";
+	mes "Go see ^000077Mother Mathilda near Morroc Town^000000.";
+	mes "May god aid you on your guest.";
+	close;
+
+LStill3:
+	mes "[Father Mareusis]";
+	mes "Go see ^000077Father Yosuke around a Bridge in somewhere near Northern West Prontera^000000.";
+	mes "May god aid you on your guest.";
+	close;
+
+Lalrdy:
+	mes "[Father Mareusis]";
+	mes "You are already a servant of god, go show the way of god to others";
+	close;
+
+LDenny:
+	mes "[Father Mareusis]";
+	mes "I'm sorry my son but you don't have ";
+	mes "the abilities to be an Acolyte.";
+	mes "You need ^FF0000Novice and have Job Lv 10^000000.";
+	close;
+
+LInfo:
+	mes "[Father Mareusis]";
+	mes "My son you need ^FF0000Novice Job Lv 10^000000 ";
+	mes "to be a servant of god in Rune Midgard.";
+	close;
+
+LChange:
+	delitem 1009,1;
+	mes "[Father Mareusis]";
+	mes "Congratulations, you are now qualified ";
+	mes "to be an Acolyte of this church.";
+	next;
+	jobchange Job_Acolyte;
+	mes "[Father Mareusis]";
+	mes "May god bless you on your quest.";
+	close;
+
+LCancel:
+	mes "[Father Mareusis]";
+	mes "May god light your path.";
+	close;
+LNotNovice:
+	mes "You arent novice... cant be an acolyte.";
+	close;
+close; }
+
+//Acolyte Job Change NPC 2
+prt_fild03.gat,365,255,5	script	Ascetic	89,{
+	if(countitem(7015)==1) goto LErrand;
+	mes "[Father Rubalkabara]";
+	mes "I have nothing to say to you.";
+	mes "Get lost.";
+	close;
+
+LErrand:	mes "[Father Rubalkabara]";
+		mes "Oh I see you want to be an Acolyte.";
+		mes "Thank you for bringing me this bookclip.";
+		mes "It'll aid me on my studies.";
+		next;
+		delitem 7015,1;
+		getitem 1009,1;
+		mes "Give this item to Father Mareusis.";
+		mes "Good Luck my friend.";
+close; }
+
+//Acolyte Job Change NPC 3
+moc_fild07.gat,41,355,4	script	Nun of Penance	95,{
+	if(countitem(7023)==1) goto LErrand;
+	mes "[Mother Mathilda]";
+	mes "Sorry but i have nothing to say to you.";
+	close;
+
+LErrand:	mes "[Mother Mathilda]";
+		mes "So you heard the call.";
+		mes "I'll purify this blade.";
+		next;
+		delitem 7024,1;
+		getitem 1009,1;
+		mes "Show this to Father Mareusis.";
+		mes "God bless you.";
+		close;	}
+
+//Acolyte Job Change NPC 4
+prt_fild00.gat,208,218,6	script	Ascetic	98,{
+	if(countitem(7023)==1) goto LErrand;
+	mes "[Father Yosuke]";
+	mes "Who are you? What you want?";
+	mes "Get out of here!";
+	close;
+
+LErrand:	mes "[Father Yosuke]";
+		mes "I see, I see, Father Mareusis sent you huh?";
+		mes "Very well...";
+		next;
+		delitem 7023,1;
+		getitem 1009,1;
+		mes "Show him this.";
+		mes "Now get out of here, you are distracting me.";
+close; }
+// ACOLYTE - END

@@ -1,0 +1,259 @@
+<?
+// DEFINITION FILE FOR JOBS
+
+map_def_jobs();
+
+function map_def_jobs() {
+  $jobs=array();
+  $job=array();
+  $job["name"]="Novice";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=50;
+  $job["weapon_delay"][2]=65;
+  $job["weapon_delay"][3]=70;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[0]=$job;
+  
+  $job=array();
+  $job["name"]="Swordman";
+  $job["m_weight"]=800;
+  $job["m_sp"]=2;
+  $job["m_hp"]=0.7;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=55;
+  $job["weapon_delay"][4]=60;
+  $job["weapon_delay"][5]=60;
+  $jobs[1]=$job;
+  
+  $job=array();
+  $job["name"]="Magician";
+  $job["m_weight"]=200;
+  $job["m_sp"]=6;
+  $job["m_hp"]=0.3;
+  $job["weapon_delay"][1]=50;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[2]=$job;
+  
+  $job=array();
+  $job["name"]="Archer";
+  $job["m_weight"]=600;
+  $job["m_sp"]=2;
+  $job["m_hp"]=0.5;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[3]=$job;
+  
+  $job=array();
+  $job["name"]="Acolyte";
+  $job["m_weight"]=400;
+  $job["m_sp"]=5;
+  $job["m_hp"]=0.4;
+  $job["weapon_delay"][1]=35;
+  $job["weapon_delay"][2]=0;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[4]=$job;
+  
+  $job=array();
+  $job["name"]="Merchant";
+  $job["m_weight"]=800;
+  $job["m_sp"]=3;
+  $job["m_hp"]=0.4;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=70;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[5]=$job;
+  
+  $job=array();
+  $job["name"]="Thief";
+  $job["m_weight"]=400;
+  $job["m_sp"]=2;
+  $job["m_hp"]=0.5;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=65;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[6]=$job;
+  
+  $job=array();
+  $job["name"]="Knight";
+  $job["m_weight"]=800;
+  $job["m_sp"]=3;
+  $job["m_hp"]=1.5;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=55;
+  $job["weapon_delay"][5]=55;
+  $jobs[7]=$job;
+  
+  $job=array();
+  $job["name"]="Priest";
+  $job["m_weight"]=600;
+  $job["m_sp"]=7;
+  $job["m_hp"]=0.75;
+  $job["weapon_delay"][1]=35;
+  $job["weapon_delay"][2]=0;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[8]=$job;
+  
+  $job=array();
+  $job["name"]="Wizard";
+  $job["m_weight"]=400;
+  $job["m_sp"]=9;
+  $job["m_hp"]=0.55;
+  $job["weapon_delay"][1]=50;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[9]=$job;
+  
+  $job=array();
+  $job["name"]="Blacksmith";
+  $job["m_weight"]=1000;
+  $job["m_sp"]=5;
+  $job["m_hp"]=0.9;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=70;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[10]=$job;
+  
+  $job=array();
+  $job["name"]="Hunter";
+  $job["m_weight"]=700;
+  $job["m_sp"]=4;
+  $job["m_hp"]=0.85;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=60;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[11]=$job;
+  
+  $job=array();
+  $job["name"]="Assassin";
+  $job["m_weight"]=400;
+  $job["m_sp"]=4;
+  $job["m_hp"]=1.1;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=65;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[12]=$job;
+  
+  $job=array();
+  $job["name"]="Knight";
+  $job["m_weight"]=800;
+  $job["m_sp"]=3;
+  $job["m_hp"]=1.5;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=55;
+  $jobs[13]=$job;
+  
+  $job=array();
+  $job["name"]="Cruisader";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=55;
+  $job["weapon_delay"][5]=55;
+  $jobs[14]=$job;
+  
+  $job=array();
+  $job["name"]="Monk";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[15]=$job;
+  
+  $job=array();
+  $job["name"]="Sage";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=0;
+  $job["weapon_delay"][3]=0;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[16]=$job;
+  
+  $job=array();
+  $job["name"]="Rogue";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[17]=$job;
+  
+  $job=array();
+  $job["name"]="Alchemist";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[18]=$job;
+  
+  $job=array();
+  $job["name"]="Bard";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[19]=$job;
+  
+  $job=array();
+  $job["name"]="Dancer";
+  $job["m_weight"]=0;
+  $job["m_sp"]=0;
+  $job["m_hp"]=0;
+  $job["weapon_delay"][1]=40;
+  $job["weapon_delay"][2]=50;
+  $job["weapon_delay"][3]=50;
+  $job["weapon_delay"][4]=0;
+  $job["weapon_delay"][5]=0;
+  $jobs[20]=$job;
+?>

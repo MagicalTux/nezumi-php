@@ -1,0 +1,55 @@
+prt_in.gat,63,69,3	script	Dietrich	84,{ 
+	mes "[Dietrich]";
+	mes "If you bring me ^FF0000Rough Oridecon^000000 or ^FF0000 Rough Elunium^000000, I can refine them into pure stones. I need 5 rough stones to have enough materials for a pure one.";
+	next;
+	menu "Purify Oridecon.",Lori,"Purify Elunium.",Lelu,"Cancel.",Lcancel;
+Lori:	if(countitem(756)<5) goto Llessori;
+	delitem 756,5;
+	getitem 984,1;
+  	mes "[Dietrich]";
+  	mes "Here is your Pure Oridecon. Thanks for your business.";
+  	close;
+Llessori:	mes "[Dietrich]";
+		mes "You don't have enough ores.";
+		mes "I need 5 rough stones to have enough to make a pure ore.";
+		close;
+Lelu:	if(countitem(757)<5) goto Llesselu;
+	delitem 757,5;
+  	getitem 984,1;
+  	mes "[Dietrich]";
+  	mes "Here is your Pure Elunium. Thanks for your business.";
+  	close;
+Llesselu:	mes "[Dietrich]";
+		mes "You don't have enough ores.";
+		mes "I need 5 rough stones to have enough to make a pure ore.";
+		close;
+Lcancel:	close;	}
+
+alberta_in.gat,21,63,4	script	Xenophon	84,{ 
+	mes "[Xenophon]";
+	mes "If you bring me ^FF0000Rough Oridecon^000000 or ^FF0000 Rough Elunium^000000, I can refine them into pure stones. I need 5 rough stones to have enough materials for a pure one.";
+	next;
+	menu "Purify Oridecon.",Lori,"Purify Elunium.",Lelu,"Cancel.",Lcancel;
+Lori:	if(countitem(756)<5) goto Llessori;
+	delitem 756,5;
+	getitem 984,1;
+  	mes "[Xenophon]";
+  	mes "Here is your Pure Oridecon. Thanks for your business.";
+  	close;
+Llessori:	mes "[Xenophon]";
+		mes "You don't have enough ores.";
+		mes "I need 5 rough stones to have enough to make a pure ore.";
+		close;
+Lelu:	if(countitem(757)<5) goto Llesselu;
+	delitem 757,5;
+  	getitem 984,1;
+  	mes "[Xenophon]";
+  	mes "Here is your Pure Elunium. Thanks for your business.";
+  	close;
+Llesselu:	mes "[Xenophon]";
+		mes "You don't have enough ores.";
+		mes "I need 5 rough stones to have enough to make a pure ore.";
+		close;
+Lcancel:	close;	}
+
+// End

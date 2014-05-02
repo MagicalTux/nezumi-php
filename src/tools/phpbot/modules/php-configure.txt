@@ -1,0 +1,1 @@
+ './configure' --prefix=/usr/local/php-cgi --disable-cgi --without-pear '--enable-ftp' '--with-mysql' '--with-gd' '--with-jpeg-dir' '--with-png-dir' '--with-zlib-dir' --with-zlib --enable-sockets --with-iconv --enable-pcntl --disable-session --enable-sockets --with-xmlrpc --enable-mbstring=all 

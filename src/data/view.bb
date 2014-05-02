@@ -1,0 +1,81 @@
+; view
+fil$="maps\alberta.ggz"
+
+; try to display this file...
+
+dir=ReadDir("maps")
+Repeat
+	fil$=NextFile(dir)
+	If fil="" Then Exit
+	
+	If Right(fil,4)=".gga"
+		fil="maps\"+fil
+	
+		f=ReadFile(fil)
+		If Not f Then RuntimeError "Error opening file !"
+		
+		SeekFile f,4
+		
+		width=readL(f)
+		height=readL(f)
+		
+		out=CreateImage(width,height)
+		
+		AppTitle fil
+		
+		SetBuffer ImageBuffer(out)
+		
+		For y=1 To height
+			For x=1 To width Step 8
+				l=l+1
+				p=readB(f)
+				For i=0 To 7
+					n=p And (2^i)
+					If n<>0 Then n=255
+					Color n,n,n
+					Plot x+i,y
+				Next
+			Next
+		Next
+		CloseFile(f)
+		
+		SaveImage out,fil+".bmp"
+		FreeImage out
+	EndIf
+Forever
+
+
+End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function readL(stream)
+	byt1=ReadByte(stream)
+	byt2=ReadByte(stream)
+	byt3=ReadByte(stream)
+	byt4=ReadByte(stream)
+	byt=byt1 + (byt2 Shl 8) + (byt3 Shl 16) + (byt4 Shl 24)
+	Return byt
+End Function
+
+Function readB(stream)
+	byt1=ReadByte(stream)
+;	byt2=ReadByte(stream)
+
+;	byt=byt1 + (byt2 Shl 8)
+	Return byt1
+End Function

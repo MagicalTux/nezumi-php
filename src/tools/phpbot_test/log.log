@@ -1,0 +1,361 @@
+POST /wl/Translate HTTP/1.1
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Accept-Language: fr
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)
+Host: www.worldlingo.com
+Content-Length: 64
+Connection: Close
+Referer: http://www.worldlingo.com/products_services/worldlingo_translator.html
+Cache-Control: no-cache
+
+wl_url=&wl_text=test&wl_glossary=gl1&wl_srclang=EN&wl_trglang=frHTTP/1.1 200 
+Date: Sun, 20 Jul 2003 00:06:56 GMT
+Server: Apache
+Set-Cookie: Worldlingo.com=80.14.187.168.1058659616124392; path=/; expires=Fri, 18-Jul-08 00:06:56 GMT
+Set-Cookie: JSESSIONID=B18943AF6034E48EA8BAC4A5015EC250.tc3; Path=/
+Set-Cookie: WL_Trans_Details=wl_lp=EN-FR; Expires=Mon, 19-Jul-2004 00:07:02 GMT
+pragma: no-cache
+Cache-Control: no-cache, no-store
+Content-Type: text/html; charset=UTF-8
+Content-Length: 19391
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">  
+<html>
+<head>
+<title>Online translator powered by WorldLingo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://www.worldlingo.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.worldlingo.com" r (n 0 s 0 v 0 l 0))'>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="/scripts/menu_event.js" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript" src="/scripts/languages.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript" src="/scripts/translator.js"></SCRIPT><LINK rel="stylesheet" href="/wl_styles.css" type="text/css">
+<!--
+Copyright (c) Worldlingo.com 2001
+All Rights Reserved.
+    WTS_STATUS_SUCCESS
+  
+-->
+</head>
+<body bgcolor="#FFFFFF" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" rightmargin="0">
+<!--HEADER GOES HERE -->
+
+
+
+
+
+
+  
+
+<body bgcolor="#FFFFFF" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" rightmargin="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="2" width="241"><a href="http://www.worldlingo.com/index.html"><img src="http://www.worldlingo.com/images/wl_master_logo.gif" width=240 height=60 border=0 alt="WorldLingo - Translation, Localization, Globalization"></a></td>
+    <td align="right" valign="top">       <table border="0" cellspacing="0" cellpadding="0" height="20">
+        <tr> 
+          <td align="left" width="30"><img src="http://www.worldlingo.com/images/side.gif" width="30" height="20"></td>
+          <td class="header" width="55" align="center" bgcolor="#3399CC" style="BORDER-RIGHT:#FFFFFF 1px solid;">
+            <a class="header" href="http://www.worldlingo.com/search.html">Search</a>
+          </td>
+          <td class="header" width="60" align="center" bgcolor="#3399CC" style="BORDER-RIGHT:#FFFFFF 1px solid;">
+            <a class="header" href="http://www.worldlingo.com/site_map.html">Site Map</a>
+          </td>
+          <td class="header" width="65" align="center" bgcolor="#3399CC">
+            <a class="header" href="http://www.worldlingo.com/company_information/contact.html">Contact</a>
+          <a name="top"></a></td>          <td width="70" align="right" bgcolor="#3399CC"></td>
+                  </tr>
+      </table>
+        </td>
+  </tr>
+  <tr valign="baseline">
+    <td align="right" valign="top">      <SCRIPT language="JavaScript" TYPE="text/javascript" src="http://ric2.com/cgr.jsp?866565"></SCRIPT>
+      </td>
+  </tr>
+</table><script language="JavaScript1.2" src="/scripts/HM_Loader.js" type='text/javascript'></script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#3399CC">
+  <tr> 
+    <td> 
+      <table border="0" cellspacing="0" cellpadding="2" bgcolor="#3399CC" height="20">
+        <tr> 
+          <td class="header" align="center" width="130" nowrap style="BORDER-RIGHT:#FFFFFF 1px solid; BORDER-LEFT:#FFFFFF 1px solid; ">
+            <a class="header" href="http://www.worldlingo.com/products_services/" onMouseOver="popUp('HM_Menu1',event)" 
+              onMouseOut="popDown('HM_Menu1')" onClick="return true" title="Products &amp; Services">Products &amp; Services</a>
+          </td>
+          <td class="header" width="125" align="center" nowrap style="BORDER-RIGHT:#FFFFFF 1px solid">
+            <a class="header" href="http://www.worldlingo.com/company_information/" onMouseOver="popUp('HM_Menu2',event)" 
+              onMouseOut="popDown('HM_Menu2')" onClick="return true" title="Company Information">Company Information</a>
+          </td>
+          <td class="header" width="70" align="center" nowrap style="BORDER-RIGHT:#FFFFFF 1px solid">
+            <a class="header" href="http://www.worldlingo.com/resources/" onMouseOver="popUp('HM_Menu3',event)" 
+              onMouseOut="popDown('HM_Menu3')" onClick="return true" title="Resources">Resources</a>
+          </td>
+          <td class="header" width="45"  align="center" nowrap style="BORDER-RIGHT:#FFFFFF 1px solid" bgcolor="#666666">
+            <a class="header" href="http://www.worldlingo.com/login/login.html" onMouseOver="window.status = 'Login'; return true;" 
+              onMouseOut="window.status = ''; return true;" title="Login">Login</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- Horizontal Location -->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+  <tr> 
+    <td class="fntsize1">            <a class="fntsize1" href="/index.html">  Home</a>                    <img src="/images/mg_arrow.gif"> 
+                      <a class="fntsize1" href="/products_services/">  Products & Services</a>                    <img src="/images/mg_arrow.gif"> 
+           Online Translator                  </td>
+    <td class="fntsize1" align="right"><!--logged in status goes here -->          </td>
+  </tr>
+</table>
+<!--BODY GOES HERE -->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+  <tr> 
+    <td valign="top" colspan="2"><h1>Online Text Translator Result</h1></td>
+  </tr>
+  <tr> 
+    <td valign="top"> 
+
+<form method="post" action="/wl/Translate" name="textform">
+<input type="hidden" name="wl_ucp" value="1">
+        <table border="0" cellspacing="0" cellpadding="4" width="360" bgcolor="#EEEEEE" style="BORDER-BOTTOM: #999999 1pt solid; BORDER-LEFT: #999999 1pt solid; BORDER-TOP: #999999 1pt solid; BORDER-RIGHT: #999999 1pt solid;">
+          <tr valign="top" align="center"> 
+            <td> 
+              <table width="330" border="0" cellspacing="0" cellpadding="1">
+                <tr> 
+                  <td class="texthead" colspan="2">Translated Text (French)</td>
+                </tr>
+                <tr> 
+                  <td colspan="2"> 
+                    <p>Have this text further clarified by a professional human 
+                      translator for: <a href="https://www.worldlingo.com/wl/jobconfirmation/jobconfirmation.html?jobnum=J40689821" class="fntsize2">$31.00 USD</a>*</p>
+                  </td>
+                </tr>
+                <tr> 
+                  <td align="right"><a href="https://www.worldlingo.com/wl/jobconfirmation/jobconfirmation.html?jobnum=J40689821"><img src="/en/images/accept_quote.gif" border="0" width="90" height="26"></a></td>
+                  <td><a href="/products_services/currency_convertor.html?amount=31&jobnum=J40689821" title="Currency Convertor" target="pop" onClick="window.open('/products_services/currency_convertor.html?amount=31&jobnum=J40689821','pop','height=300,width=400');"><img src="/images/currency.gif" width="89" height="25" border="0" alt="Convert Currency"></a></td>
+                </tr>
+                <tr> 
+                  <td colspan="2">                 <textarea name="wl_result" rows="7" wrap="VIRTUAL" class="textbox" cols="46" readonly onKeyDown="wl_text.focus()">essai</textarea>   
+                  </td>
+                </tr>
+                 <tr>
+                  <td class="texthead" colspan="2">Original Text (English)</td>
+                </tr>
+                <tr> 
+                   <td class="fntsize1" valign="baseline" no wrap>To translate new text, press the button "Clear Text" then type or paste it below. <img src="/images/down_arrow.gif" width="7" height="12"></td>
+                <td><spacer height="1" width="1" type="block"></td>
+                </tr>
+                                  <tr> 
+                  <td colspan="2" valign="top">                <textarea name="wl_text" rows="7" wrap="VIRTUAL" class="textbox" cols="46">test</textarea>   
+                  </td>
+                </tr>
+              </table>
+              <table width="340" border="0" cellspacing="0" cellpadding="2">
+                <tr> 
+                  <td colspan="2"> 
+                  <table border="0" cellspacing="0" cellpadding="1" align="right">
+                      <tr> 
+                        <td><a href="#" onClick="document.textform.wl_text.value=''" ><img src="/en/images/clear.gif" width="90" height="26" border="0"></a></td>                        <td><a href="/wts/text_print.html?wl_translation=essai&wl_srclang=English&wl_trglang=French" target="_blank"><img src="/en/images/print_text.gif" width="90" height="26" border="0"></a></td>
+                                                <td><a href="/products_services/special_characters.html" target="pop" onClick="window.open('special_characters.html','pop','height=150,width=300');"><img src="/images/special_chars.gif" width="91" height="25" border="0" alt="Special Characters Input"></a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="147" class="fntsize1">Subject:</td>
+                  <td align="right">
+                  <select name="wl_glossary">;
+<!-- Glossaries -->
+<option value="gl1" SELECTED >General</option>
+<option value="gl2">Automotive</option>
+<option value="gl3">Aviation/Space</option>
+<option value="gl4">Chemistry</option>
+<option value="gl5">Colloquial</option>
+<option value="gl6">Computers/IT</option>
+<option value="gl7">Earth Sciences</option>
+<option value="gl8">Economics/Business</option>
+<option value="gl9">Electronics</option>
+<option value="gl10">Food Science</option>
+<option value="gl11">Legal</option>
+<option value="gl12">Life Sciences</option>
+<option value="gl13">Mathematics</option>
+<option value="gl14">Mechanical Engineering</option>
+<option value="gl15">Medicine</option>
+<option value="gl16">Metallurgy</option>
+<option value="gl17">Military Science</option>
+<option value="gl18">Naval/Maritime</option>
+<option value="gl19">Photography/Optics</option>
+<option value="gl20">Physics/Atomic Energy</option>
+<option value="gl21">Political Science</option>                  </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="147" class="fntsize1">Source Language:</td>
+                  <td align="right"><select name="wl_srclang">
+                <option value="none" selected>Select a language...</option><!-- Src --><OPTION value="EN" selected >English</OPTION>
+<OPTION value="ZH_CN">Chinese (Simplified)</OPTION>
+<OPTION value="ZH_TW">Chinese (Traditional)</OPTION>
+<OPTION value="NL">Dutch</OPTION>
+<OPTION value="FR">French</OPTION>
+<OPTION value="DE">German</OPTION>
+<OPTION value="EL">Greek</OPTION>
+<OPTION value="IT">Italian</OPTION>
+<OPTION value="JA">Japanese</OPTION>
+<OPTION value="KO">Korean</OPTION>
+<OPTION value="PT">Portuguese (Brazil)</OPTION>
+<OPTION value="RU">Russian</OPTION>
+<OPTION value="ES">Spanish</OPTION>
+                                    </select></td>
+                </tr>
+                <tr> 
+                  <td width="147" class="fntsize1">Target Language:</td>
+                  <td align="right"><select name="wl_trglang">
+                      <option value="none" selected>Select a language...</option><!-- Trg --><OPTION value="en">English</OPTION>
+<OPTION value="zh_cn">Chinese (Simplified)</OPTION>
+<OPTION value="zh_tw">Chinese (Traditional)</OPTION>
+<OPTION value="nl">Dutch</OPTION>
+<OPTION value="fr" selected >French</OPTION>
+<OPTION value="de">German</OPTION>
+<OPTION value="el">Greek</OPTION>
+<OPTION value="it">Italian</OPTION>
+<OPTION value="ja">Japanese</OPTION>
+<OPTION value="ko">Korean</OPTION>
+<OPTION value="pt">Portuguese (Brazil)</OPTION>
+<OPTION value="ru">Russian</OPTION>
+<OPTION value="es">Spanish</OPTION>
+                </tr>
+                <tr> 
+                  <td colspan="2" align="right"> 
+                    <table width="340" border="0" cellspacing="0" cellpadding="1">
+                      <tr> 
+                        <td width="207" align="right" bgcolor="#eeeeee"  style="BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid;" class="fntsize1">By pressing the translate button I agree to the <a href="/company_information/terms_conditions.html" target="blank" class="fntsize1">terms &amp; conditions</a></td>
+                        <td align="right" width="27" bgcolor="#eeeeee" style="BORDER-BOTTOM: #999999 1px solid;"><img src="/images/hand.gif" width="26" height="15"></td>
+                      <script language="Javascript">
+                        document.write('<td align="right" width="90" bgcolor="#eeeeee" valign="middle" style="BORDER-BOTTOM: #999999 1pt solid;"><input type="image" value="Translate" img src="/en/images/machine_translate.gif" border="0" width="90" height="26" onClick="ValidateTranslatorForm(this.form); return false;"></td>');
+                      </script>
+                      <noscript>
+                        <td align="right" width="90" bgcolor="#eeeeee" valign="middle" style="BORDER-BOTTOM: #999999 1pt solid;"><input type="image" value="Translate" img src="/en/images/machine_translate.gif" border="0" width="90" height="26"></td>
+                      </noscript>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table></form>
+     </td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr> 
+          <td align="center" valign="top"> 
+
+<table width="100%" border="0" bgcolor="#D8EBEB" cellspacing="0" cellpadding="8" style="BORDER-BOTTOM: #D3E5FC 1pt solid; BORDER-LEFT: #D3E5FC 1pt solid; BORDER-TOP: #D3E5FC 1pt solid; BORDER-RIGHT: #D3E5FC 1pt solid;">
+              <tr> 
+                <td> <p class="fntsize3"><strong>Looking for a professional language translator?</strong></p>
+                  <p><strong><a href="/wti/language_translator.html"><img src="/wti/online_translator/online_translators.gif" alt="Professional Language Translator" width="50" height="50" hspace="8" border="0" align="left"></a><a href="/wti/language_translator.html" class="fntsize2">Fast, 
+                    accurate professional translations available worldwide - 24 
+                    hours a day, 7 days a week, 52 weeks of the year!</a></strong></p> 
+                </td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#FFFBEC" class="fntsize1">
+                    <tr>
+                      <td valign="top" colspan="2"><p><strong>We offer...</strong></p></td>
+             
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Experienced, native-speaking translators for over <a href="/languages/" class="fntsize1">90 
+                        languages</a></td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td valign="top"><a href="#quote" class="fntsize1" title="Instant Translation Quote">On-line 
+                        quoting</a> for instant estimates on your translation 
+                        job</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Internet translation specialization</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td><a href="/products_services/software_localization.html title="software localization" class="fntsize1">Software 
+                        localization service</a></td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Translations for a wide range of documents</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Translation progress reports available, and accessible 
+                        on-line</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Translation memory to save you time and money in the 
+                        future</td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td>Specialized <a href="/products_services/website_localization.html" class="fntsize1">web 
+                        site localization service</a></td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><img src="/images/tick.gif" width="15" height="14"></td>
+                      <td><a href="/products_services/translation_asset_management.html" class="fntsize1" title="Translation Asset Management">Translation 
+                        Asset Management</a> solutions to reduce costs and achieve 
+                        faster turnaround times</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+
+                </td>
+              </tr>
+            </table>
+          </td>
+          
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<!--FOOTER GOES HERE -->
+
+<br><br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td align="left" width="100">
+
+    <a href="http://www.worldlingo.com/wl/translate?style=print">
+<img src="http://www.worldlingo.com/images/print_page_w.gif" width="50" height="20" border="0" align="absmiddle" alt="Print Page"></a> 
+
+    </td>
+    <td align="left"><a href="http://www.worldlingo.com/feedback.html"><img src="http://www.worldlingo.com/images/feedback_w.gif" width="80" height="20" border="0" align="absmiddle" alt="Feedback"></a></td>
+    <td width="100%" align="right" class="fntsize1"><a href="#top" title="To top of page"><img src="http://www.worldlingo.com/en/images/to_top.gif" width="50" height="15" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td height="4" colspan="3" align="right" bgcolor="#3399CC"></td>
+  </tr>
+ <tr align="center" valign="middle"> 
+    <td height="100" colspan="3" bgcolor="#FFFFFF" class="fntsize1"> <p class="fntsize1"><a class="fntsize1" href="http://www.worldlingo.com/">Home</a> | <a class="fntsize1" href="http://www.worldlingo.com/company_information/about_worldlingo.html">About WorldLingo</a> | <a class="fntsize1" href="http://www.worldlingo.com/company_information/terms_conditions.html">Terms & Conditions</a> | <a class="fntsize1" href="http://www.worldlingo.com/company_information/contact.html">Contact</a> 
+        <br><br>
+        <a href="http://www.worldlingo.com" class="fntsize1">WORLDLINGO USA</a> 
+        - Tel: +1 (866) 546 0570<br>
+        <a href="http://www.worldlingo.co.uk" class="fntsize1">WORLDLINGO UK</a> 
+        - Tel: +44 (0) 700 3 999 444<br>
+        <a href="http://www.worldlingo.com.au" class="fntsize1">WORLDLINGO AUSTRALIA</a> 
+        - Tel: +61 (7) 3876 0911<br>
+        <br>
+        &copy;1998-2003 WorldLingo, Inc. </p></td>
+  </tr>
+</table>
+<br><br><br><br>
+
+</body>
+</html>

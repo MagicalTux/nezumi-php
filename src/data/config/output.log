@@ -1,0 +1,227 @@
+Array
+(
+    [45] => Array
+        (
+            [class] => 45
+            [name] => WARPNPC
+            [JName] => WARPNPC
+            [lv] => 0
+            [max_hp] => 0
+            [base_exp] => 0
+            [job_exp] => 0
+            [range] => 0
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [0] => Array
+        (
+            [class] => 0
+            [name] => 1872
+            [JName] => 672
+            [lv] => 480
+            [max_hp] => 909
+            [base_exp] => 0
+            [job_exp] => 1
+            [range] => 200
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [8] => Array
+        (
+            [class] => 8
+            [name] => 40
+            [JName] => 65
+            [lv] => 65
+            [max_hp] => 205
+            [base_exp] => 159
+            [job_exp] => 2
+            [range] => 7
+            [atk1] => 82
+            [atk2] => 13
+            [def1] => 
+            [def2] => 1248
+            [mdef1] => 500
+            [mdef2] => 360
+            [hit] => 968
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [25] => Array
+        (
+            [class] => 25
+            [name] => 908:5987
+            [JName] => 918:2993
+            [lv] => 509
+            [max_hp] => 909
+            [base_exp] => 0
+            [job_exp] => 1
+            [range] => 200
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [91] => Array
+        (
+            [class] => 91
+            [name] => 516:498
+            [JName] => 2501:19
+            [lv] => 4041
+            [max_hp] => 909
+            [base_exp] => 0
+            [job_exp] => 1
+            [range] => 200
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [7] => Array
+        (
+            [class] => 7
+            [name] => 1013:4210
+            [JName] => 943:10
+            [lv] => 910
+            [max_hp] => 1018
+            [base_exp] => 864
+            [job_exp] => 432
+            [range] => 4005
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [300] => Array
+        (
+            [class] => 300
+            [name] => 1480
+            [JName] => 480
+            [lv] => 480
+            [max_hp] => 1018
+            [base_exp] => 864
+            [job_exp] => 432
+            [range] => 4005
+            [atk1] => 0
+            [atk2] => 0
+            [def1] => 
+            [def2] => 0
+            [mdef1] => 0
+            [mdef2] => 0
+            [hit] => 0
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+    [80] => Array
+        (
+            [class] => 80
+            [name] => 909:6681
+            [JName] => 507:477
+            [lv] => 1201
+            [max_hp] => 205
+            [base_exp] => 159
+            [job_exp] => 2
+            [range] => 7
+            [atk1] => 82
+            [atk2] => 13
+            [def1] => 
+            [def2] => 1248
+            [mdef1] => 500
+            [mdef2] => 360
+            [hit] => 968
+            [flee] => 0
+            [scale] => 0
+            [race] => 0
+            [ele] => 20
+            [mode] => 1
+            [speed] => 200
+            [adelay] => 0
+            [amotion] => 0
+            [dmotion] => 0
+        )
+
+)

@@ -1,0 +1,285 @@
+//Knight JobChange	NPC 1
+
+prt_in.gat,89,104,4	script	Knight	56,{
+mes "[Prontera Knight]";
+mes "Good Day,This is the Prontera Chivarly.";
+next;
+menu "Change a Job into a Knight.",LKnightjob,"The Requirements.",LRq,"Quit.",Lend;
+
+	LRq:
+		mes "[Prontera Knight]";
+		mes "You must be at least Job Level 40 before everything.";
+		mes "Please be a `Swordman' first.";
+		next;
+		mes "For now, We've transformed players into the knight without any conditions except the Job Level requirement.";
+		next;
+		mes "[Prontera Knight]";
+		mes "When the Job Quests are updated, you will have to pass an additional Test.";
+		mes "Please note this point.";
+		close;
+
+	LKnightjob:
+		if(getjob !=Job_Swordman) goto Lol;
+		if(joblevel<40) goto Lol3;
+		goto Lol2;
+
+	Lol:
+	 	mes "[Prontera Knight]";
+		mes "Sorry other other jobs except Swordman are not permitted to be Knights.";
+		mes "Please be a `Swordman' first.";
+		mes ".......Everyboy can't be a Knight.";
+	        close;
+
+	Lol2:
+	 	mes "[Prontera Knight]";
+		mes "Now you become a Knight.";
+		jobchange job_Knight;
+		mes "For now, We've transformed players into the knight without any conditions except the Job Level requirement.";
+		next;
+		mes "[Prontera Knight]";
+		mes "When the Job Quests are updated, you will have to pass an additional Test.";
+		mes "Please note this point.";
+		close;
+
+	Lol3:
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+	Lend:
+		mes "[Knight]";
+		mes "Have a good day";
+		close;
+close;}
+
+
+//Hunter	JobChange	NPC 1
+
+in_hunter.gat,101,98,4	script	Hunter Guildsman	98,{
+        mes "[Hunter Guildsman]";
+        mes "Good Day,This is the Hunter Guild.";
+        next;
+        menu "Change a Job into a Hunter.",LJob,"The Requirements.",LRq,"Quit.",Lend;
+
+	LRq:
+		mes "[Hunter Guildsman]";
+		mes "You must be at least Job Level 40 before everything.";
+		mes "Other jobs except `Archer' are not permitted to be Hunters.";
+		close;
+
+	LJob:
+		if(getjob !=Job_Archer) goto Lol1;
+		if(joblevel<40) goto Lol3;
+		goto Lol2;
+
+	Lol1:
+		mes "Other jobs except `Archer' are not permitted to be Hunters.";
+		close;
+
+	Lol3:
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+
+	Lol2:
+		mes "Now you become a Hunter.";
+		jobchange job_hunter;
+		close;
+
+	Lend:
+		mes "[Hunter Guildsman]";
+		mes "have a good day.";
+		close;
+close;	}
+
+
+//Hunter	Jobchanger	NPC 2
+
+pay_fild10.gat,148,252,4	script	Hunter	97,{
+	mes "[Hunter Guildsman]";
+	mes "You came for the Hunter job?";
+	mes "Follow me.";
+	next;
+	menu "Ok",Lok,"No",Lend;
+	Lok:
+		warp	"in_hunter.gat",100,90;
+		close;
+	Lend:
+	 	mes "have a nice day.";
+close;	}
+
+
+
+//Blacksmith	Jobchanger	NPC1
+
+geffen_in.gat,110,170,4	script	Blacksmith Guildsman	63,{
+mes "[Blacksmith Guildsman]";
+mes "Welcome to the Merchant Guild.";
+next;
+menu "Change a Job into a Blacksmith.",Ljob,"The Requirements.",Lrq,"Quit.",Lend;
+	Ljob:
+		mes "[Blacksmith Guildsman]";
+		if(getjob !=job_merchant) goto Lol;
+		if(joblevel<40) goto Lol1;
+		goto Lol2;
+
+	Lol:
+		mes "Other jobs except `Merchant' are not permitted to be Blacksmiths.";
+		close;
+
+	Lol1:
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+
+	Lol2:
+		mes "Now you become a Blacksmith.";
+		jobchange job_BLACKSMITH;
+		close;
+
+	Lrq:
+		mes "[Blacksmith]";
+		mes "For now, We've transformed players into the Blacksmith without any conditions except the Job Level requirement.";
+		mes "That are, first be a Merchant and have job level 40.";
+		next;
+		mes "[Blacksmith]";
+		mes "When the Job Quests are updated, you will have to pass an additional 
+Test.";
+		mes "Please note this point.";
+		close;
+
+	Lend:
+		mes "[Blacksmith]";
+		mes "Have a nice day.";
+close;	}
+
+
+//ASSASSIN	Jobchanger	NPC 1
+
+in_moc_16.gat,71,88,4	script	Assassin Clan Member	99,{
+mes "[Assassin Clan Member]";
+mes "Welcome to the Assassin Clan.";
+next;
+menu "Change a job into an Assassin.",Ljob,"The Requirements.",Lrq,"Quit.",Lend;
+	Ljob:
+		if(getjob !=job_thief) goto Lol;
+		if(joblevel<40)	goto Lol1;
+		goto Lol2;
+
+	Lol:
+		mes "[Assassin Clan Member]";
+		mes "Other jobs except `Thief' are not permitted to be Assassins.";
+		close;
+
+	Lol1:
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+
+	Lol2:
+		mes "[Assassin Clan Member]";
+		mes "Now you become an Assassin.";
+		jobchange job_ASSASSIN;
+		close;
+
+
+	Lrq:
+		mes "[Assassin Clan Memeber]";
+		mes "For now, We've transformed players into the Assassin without any conditions except the Job Level requirement.";
+		mes "That are, first be a Thief and have job level 40.";
+		next;
+		mes "[Assassin Clan Memeber]";
+		mes "When the Job Quests are updated, you will have to pass an additional Test.";
+		mes "Please note this point.";
+		close;
+
+	Lend:
+		mes "[Assassin Clan Member]";
+		mes "Have a nice day.";
+
+close;	}
+
+
+//Wizard	Jobchanger	NPC 1
+
+gef_tower.gat,111,37,4	script	Wizard	70,{
+mes "[Wizard]";
+mes "Welcome to the Wizard Guild.";
+next;
+menu "Change a Job into a Wizard.",Ljob,"The 
+Requirements.",Lrq,"Quit.",Lend;
+	Ljob:
+		if(getjob !=job_mage) goto Lol;
+		if(joblevel<40) goto Lol1;
+		goto Lol2;
+
+	Lol:
+		mes "[Wizard]";
+		mes "Other jobs except `Mage' are not permitted to be Wizards.";
+		close;
+
+	Lol1:
+		mes "[Wizard]";
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+
+	Lol2:
+		mes "Now you become a Wizard.";
+		jobchange job_WIZARD;
+		close;
+
+
+		Lrq:
+		mes "[Wizard]";
+		mes "For now, We've transformed players into the Wizard without any conditions except the Job Level requirement.";
+		mes "That are, first be a Mage and have job level 40.";
+		next;
+		mes "[Wizard]";
+		mes "When the Job Quests are updated, you will have to pass an additional Test.";
+		mes "Please note this point.";
+		close;
+
+	Lend:
+		mes "[Wizard]";
+		mes "Have a nice day.";
+close;	}
+
+
+//Priest	Jobchanger	NPC 1
+
+prt_church.gat,16,41,4	script	Cleric	60,{
+mes "[Cleric]";
+mes "Good Day? This is the Prontera Parish .";
+next;
+menu "Change a Job into a Priest.",Ljob,"The 
+Requirements.",Lrq,"Quit.",Lend;
+	Ljob:
+		if(getjob !=job_acolyte) goto Lol;
+		if(joblevel<40) goto Lol1;
+		goto Lol2;
+
+	Lol:
+		mes "[Cleric]";
+		mes "Other jobs except `Acolyte' are not permitted to be Priests.";
+		close;
+
+
+	Lol1:
+		mes "[Cleric]";
+		mes "You must be at least Job Level 40 before everything.";
+		close;
+
+	Lol2:
+		mes "Now you become a Priest.";
+		jobchange job_PRIEST;
+		close;
+
+	Lrq:
+		mes "[Cleric]";
+		mes "For now, We've transformed players into the Priest without any conditions except the Job Level requirement.";
+		next;
+		mes "[Cleric]";
+		mes "When the Job Quests are updated, you will have to pass an additional Test.";
+		mes "Please note this point.";
+		close;
+
+	Lend:
+		mes "[Cleric]";
+		mes "Have a nice day.";
+		close;
+close;}

@@ -1,0 +1,11 @@
+"KOREA" MODULE
+
+Created by MagicalTux
+
+Initially, it was designed to  translate korean folder names from  the data.grf
+to english words.  Now it supports  reverse translation and  many languages. It
+uses the worldlingo translation service  to get his translations, and  requires
+iconv (php extention and libraries) for charset conversions (worldlingo outputs
+UTF-8 and we need ISO).
+
+If you have any comment, mail to : w@ff.st

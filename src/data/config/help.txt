@@ -1,0 +1,27 @@
+Input one of the following commands and press ENTER.
+
+!die - Suicide
+!alive - Resurrect
+!save - Save
+!load - Reload !save'd location
+!rura (map filename) (x co-ordinate) (y-coordinate) - Warp to the x-y of map (Example: !rura morocc.gat 150 160)
+!jobchange (Job ID) - Switch jobs
+0 - Novice, 1 - Swordsman, 2 - Magician, 3 - Archer, 4 - Acolyte, 5 - Merchant, 6 - Thief, 7 - Knight, 8 - Priest, 9 - Wizard, 10 - Blacksmith, 11 - Hunter, 12 - Assasin
+!option (x) (y) (z) - Activates status x y z (see below)
+Example: !option 0 0 16
+X = 1 - Petrified, 2 - Frozen, 3 - Unfrozen, 4 - Sleep, 6 - Darkness
+y = 1 - Poisoned, 2 - Black Spirit, 3 - Silence, 16 - Makes things around dark
+z = 1 - Sight, 2 - Hardened, 4 - Cloaked, 8 - Attach Cart, 16 - Attach falcon, 32 - PecoPeco Ride, 64 - Goes out
+!heal (HP) (SP) - Recovers specified HP and SP (!heal recover all HP and SP)
+!item (item ID) (quantity) - Creates the quantity of item with the item ID ou specified
+!speed (speed) - Change walking speed (1-999, 1 is fastest)
+!kami (message) - Global message
+!pvp - Player Killing mode on
+!pvpoff	- Player Killing mode off
+!Base_up (level) - Levels your base level up of (level) you specified (Maximum: 200)
+!Job_up (level) - Levels your job level up of (level) you specified (Maximum: 50)
+!h/!help - Displays this help file
+!model x y z - Change your hair style, hair colour and clothes colour
+X - Hair style (0-17), Y - Hair colour (0-8), Z - Clothes colour (0-4) (Example: !model 15 4 0)
+!go (x) - Warps you to the specific town
+0 - Prontera, 1 - Morroc, 2 - Geffen, 3 - Payon, 4 - Alberta, 5 - Izlude, 6 - Al de baran, 7 - Lutie

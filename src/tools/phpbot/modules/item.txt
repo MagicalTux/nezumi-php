@@ -1,0 +1,9 @@
+ITEM MODULE
+
+Created 2003/07/17 by MagicalTux
+
+Just type !item followed by the part of the name of an item (English or  Korean)
+in a chan where  the bot is, and you'll  get the name  of the item (If you typed
+the number) or the number if you typed the name.
+
+If you have any comment, mail to : w@ff.st

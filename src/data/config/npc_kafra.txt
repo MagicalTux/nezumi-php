@@ -1,0 +1,749 @@
+//PRONTERA
+//South Gate
+prontera.gat,152,29,7	script	Kafra	115,{
+cutin "kafra_03",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "prontera.gat",151,30;
+	mes "Thank you come again!";
+	cutin "kafra_03",255;
+	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_03",255;
+	close;
+Lteleport:
+	cutin "kafra_03",255;	
+	menu	
+		"Izlude Town -> 200z",Lizl,"Geffen Town -> 500z",Lgef,"Payon Town -> 800z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 900z",Lmor,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 700z",Lorc,"Pyra Dungeon -> 900z",Lpyr,"Sphinx Dungeon -> 950z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		//Lpro:	if(Zeny<100) goto NoGold;	set Zeny,0-100;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_03",255;
+	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+
+close;	}
+
+//West Gate
+prontera.gat,30,208,5	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "prontera.gat",32,204;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;
+	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;
+	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Izlude Town -> 200z",Lizl,"Geffen Town -> 500z",Lgef,"Payon Town -> 800z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 900z",Lmor,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 700z",Lorc,"Pyra Dungeon -> 900z",Lpyr,"Sphinx Dungeon -> 950z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		//Lpro:	set Zeny,0-100;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_01",255;
+	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//East Gate
+prontera.gat,281,208,3	script	Kafra	115,{
+cutin "kafra_02",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "prontera.gat",279,205;
+	mes "Thank you come again!";
+	cutin "kafra_02",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_02",255;	close;
+Lteleport:
+	cutin "kafra_02",255;	
+	menu	
+		"Izlude Town -> 200z",Lizl,"Geffen Town -> 500z",Lgef,"Payon Town -> 800z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 900z",Lmor,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 700z",Lorc,"Pyra Dungeon -> 900z",Lpyr,"Sphinx Dungeon -> 950z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		//Lpro:	set Zeny,0-100;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_02",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//GEFFEN
+//West Gate
+geffen.gat,122,203,5	script	Kafra	115,{
+cutin "kafra_04",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "geffen.gat",120,200;
+	mes "Thank you come again!";
+	cutin "kafra_04",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_04",255;	close;
+Lteleport:
+	cutin "kafra_04",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 600z",Lizl,"Payon Town -> 900z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 800z",Lmor,"Al De Baran Town -> 900z",Lald,"Orc Dungeon -> 800z",Lorc,"Pyra Dungeon -> 700z",Lpyr,"Sphinx Dungeon -> 750z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<600) goto NoGold;	set Zeny,0-600;		warp "izlude.gat",35,78;	close;
+		//Lgef:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_04",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//East Gate
+geffen.gat,202,123,3	script	Kafra	115,{
+cutin "kafra_02",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "geffen.gat",200,120;
+	mes "Thank you come again!";
+	cutin "kafra_02",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_02",255;	close;
+Lteleport:
+	cutin "kafra_04",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 600z",Lizl,"Payon Town -> 900z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 800z",Lmor,"Al De Baran Town -> 900z",Lald,"Orc Dungeon -> 800z",Lorc,"Pyra Dungeon -> 700z",Lpyr,"Sphinx Dungeon -> 750z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<600) goto NoGold;	set Zeny,0-600;		warp "izlude.gat",35,78;	close;
+		//Lgef:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_02",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//North Gate
+geffen.gat,38,122,5	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "geffen.gat",41,119;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 600z",Lizl,"Payon Town -> 900z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 800z",Lmor,"Al De Baran Town -> 900z",Lald,"Orc Dungeon -> 800z",Lorc,"Pyra Dungeon -> 700z",Lpyr,"Sphinx Dungeon -> 750z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<600) goto NoGold;	set Zeny,0-600;		warp "izlude.gat",35,78;	close;
+		//Lgef:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_01",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//MOROCC
+//North Gate
+morocc.gat,163,293,3	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "morocc.gat",160,291;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Prontera Town -> 900z",Lpro,"Izlude Town -> 900z",Lizl,"Payon Town -> 950z",Lpay,"Alberta Town -> 1000z",Lalb,"Geffen Town -> 800z",Lgef,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 500z",Lorc,"Pyra Dungeon -> 200z",Lpyr,"Sphinx Dungeon -> 200z",Lsph,"Payon Dungeon -> 950z",Larc,"Bibalan Dungeon -> 700z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<850) goto NoGold;	set Zeny,0-950;		warp "payon.gat",90,29;		close;
+		//Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_01",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//Northwest Gate
+morocc.gat,31,294,3	script	Kafra	115,{
+cutin "kafra_02",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "morocc.gat",30,289;
+	mes "Thank you come again!";
+	cutin "kafra_02",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_02",255;	close;
+Lteleport:
+	cutin "kafra_02",255;	
+	menu	
+		"Prontera Town -> 900z",Lpro,"Izlude Town -> 900z",Lizl,"Payon Town -> 950z",Lpay,"Alberta Town -> 1000z",Lalb,"Geffen Town -> 800z",Lgef,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 500z",Lorc,"Pyra Dungeon -> 200z",Lpyr,"Sphinx Dungeon -> 200z",Lsph,"Payon Dungeon -> 950z",Larc,"Bibalan Dungeon -> 700z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "payon.gat",90,29;		close;
+		//Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_03",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;	
+close;	}
+
+//West Gate
+morocc.gat,30,171,5	script	Kafra	115,{
+cutin "kafra_03",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "morocc.gat",34,167;
+	mes "Thank you come again!";
+	cutin "kafra_03",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_03",255;	close;
+Lteleport:
+	cutin "kafra_03",255;	
+	menu	
+		"Prontera Town -> 900z",Lpro,"Izlude Town -> 900z",Lizl,"Payon Town -> 950z",Lpay,"Alberta Town -> 1000z",Lalb,"Geffen Town -> 800z",Lgef,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 500z",Lorc,"Pyra Dungeon -> 200z",Lpyr,"Sphinx Dungeon -> 200z",Lsph,"Payon Dungeon -> 950z",Larc,"Bibalan Dungeon -> 700z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "payon.gat",90,29;		close;
+		//Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_03",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//South Gate
+morocc.gat,155,40,7	script	Kafra	115,{
+cutin "kafra_04",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "morocc.gat",159,37;
+	mes "Thank you come again!";
+	cutin "kafra_04",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_04",255;	close;
+Lteleport:
+	cutin "kafra_04",255;	
+	menu	
+		"Prontera Town -> 900z",Lpro,"Izlude Town -> 900z",Lizl,"Payon Town -> 950z",Lpay,"Alberta Town -> 1000z",Lalb,"Geffen Town -> 800z",Lgef,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 500z",Lorc,"Pyra Dungeon -> 200z",Lpyr,"Sphinx Dungeon -> 200z",Lsph,"Payon Dungeon -> 950z",Larc,"Bibalan Dungeon -> 700z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "payon.gat",90,29;		close;
+		//Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_04",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//East Gate
+morocc.gat,292,210,3	script	Kafra	115,{
+cutin "kafra_03",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "morocc.gat",289,203;
+	mes "Thank you come again!";
+	cutin "kafra_03",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_03",255;	close;
+Lteleport:
+	cutin "kafra_03",255;	
+	menu	
+		"Prontera Town -> 900z",Lpro,"Izlude Town -> 900z",Lizl,"Payon Town -> 950z",Lpay,"Alberta Town -> 1000z",Lalb,"Geffen Town -> 800z",Lgef,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 500z",Lorc,"Pyra Dungeon -> 200z",Lpyr,"Sphinx Dungeon -> 200z",Lsph,"Payon Dungeon -> 950z",Larc,"Bibalan Dungeon -> 700z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "payon.gat",90,29;		close;
+		//Lmor:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_03",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//PAYON
+//South Gate
+payon.gat,87,30,7	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "payon.gat",89,32;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 500z",Lizl,"Geffen Town -> 700z",Lgef,"Alberta Town -> 500z",Lpay,"Al De Baran Town -> 1000z",Lald,"Morocc Town -> 900z",Lmor,"Orc Dungeon -> 900z",Lorc,"Pyra Dungeon -> 950z",Lpyr,"Sphinx Dungeon -> 1000z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 750z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "geffen.gat",120,64;	close;
+		//Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_01",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//East Gate
+payon.gat,182,70,3	script	Kafra	115,{
+cutin "kafra_02",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "payon.gat",180,68;
+	mes "Thank you come again!";
+	cutin "kafra_02",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_02",255;	close;
+Lteleport:
+	cutin "kafra_02",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 500z",Lizl,"Geffen Town -> 700z",Lgef,"Alberta Town -> 500z",Lpay,"Al De Baran Town -> 1000z",Lald,"Morocc Town -> 900z",Lmor,"Orc Dungeon -> 900z",Lorc,"Pyra Dungeon -> 950z",Lpyr,"Sphinx Dungeon -> 1000z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 750z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "geffen.gat",120,64;	close;
+		//Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_02",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//Northeast Gate
+payon.gat,170,180,5	script	Kafra	115,{
+cutin "kafra_03",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "payon.gat",174,177;
+	mes "Thank you come again!";
+	cutin "kafra_03",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_03",255;	close;
+Lteleport:
+	cutin "kafra_03",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 500z",Lizl,"Geffen Town -> 700z",Lgef,"Alberta Town -> 500z",Lpay,"Al De Baran Town -> 1000z",Lald,"Morocc Town -> 900z",Lmor,"Orc Dungeon -> 900z",Lorc,"Pyra Dungeon -> 950z",Lpyr,"Sphinx Dungeon -> 1000z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 750z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "geffen.gat",120,64;	close;
+		//Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<750) goto NoGold;	set Zeny,0-750;		warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_03",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//ALBERTA
+//West Gate
+alberta.gat,24,239,5	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "alberta.gat",26,235;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 500z",Lizl,"Geffen Town -> 700z",Lgef,"Payon Town -> 800z",Lpay,"Al De Baran Town -> 1000z",Lald,"Morocc Town -> 1000z",Lmor,"Orc Dungeon -> 900z",Lorc,"Pyra Dungeon -> 950z",Lpyr,"Sphinx Dungeon -> 1000z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 200z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "alb2trea.gat",91,63;	close;
+		//Lalb:	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_01",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//IZLUDE
+//West Gate
+izlude.gat,35,80,5	script	Kafra	115,{
+cutin "kafra_01",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "izlude.gat",37,78;
+	mes "Thank you come again!";
+	cutin "kafra_01",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_01",255;	close;
+Lteleport:
+	cutin "kafra_01",255;	
+	menu	
+		"Prontera Town -> 200z",Lpro,"Geffen Town -> 500z",Lgef,"Payon Town -> 800z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 900z",Lmor,"Al De Baran Town -> 1000z",Lald,"Orc Dungeon -> 700z",Lorc,"Pyra Dungeon -> 900z",Lpyr,"Sphinx Dungeon -> 950z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "prontera.gat",156,190;	close;
+		//Lizl:	if(Zeny<200) goto NoGold;	set Zeny,0-200;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "morocc.gat",160,294;	close;
+		Lald:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_02",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//ALDEBARAN
+//South Gate
+aldebaran.gat,143,41,1	script	Kafra	115,{
+cutin "kafra_02",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+	save "aldebaran.gat",139,45;
+	mes "Thank you come again!";
+	cutin "kafra_02",255;	close;
+Lstorage:
+	mes "not available yet...";
+	cutin "kafra_02",255;	close;
+Lteleport:
+	cutin "kafra_02",255;	
+	menu	
+		"Prontera Town -> 500z",Lpro,"Izlude Town -> 500z",Lizl,"Geffen Town -> 700z",Lgef,"Payon Town -> 800z",Lpay,"Alberta Town -> 1000z",Lalb,"Morocc Town -> 1000z",Lmor,"Orc Dungeon -> 900z",Lorc,"Pyra Dungeon -> 950z",Lpyr,"Sphinx Dungeon -> 1000z",Lsph,"Payon Dungeon -> 800z",Larc,"Bibalan Dungeon -> 900z",Lbib,"Treasure Island -> 1000z",Ltre,"Cancel",Lcan;
+		
+		Lpro:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "prontera.gat",156,190;	close;
+		Lizl:	if(Zeny<500) goto NoGold;	set Zeny,0-500;		warp "izlude.gat",35,78;	close;
+		Lgef:	if(Zeny<700) goto NoGold;	set Zeny,0-700;		warp "geffen.gat",120,64;	close;
+		Lpay:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "payon.gat",90,29;		close;
+		Lmor:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "morocc.gat",160,294;	close;
+		//Lald:	set Zeny,0-1000;	warp "aldebaran.gat",140,123;	close;
+		Lorc:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "in_orcs01.gat",28,157;	close;
+		Lpyr:	if(Zeny<950) goto NoGold;	set Zeny,0-950;		warp "moc_ruins.gat",58,161;	close;
+		Lsph:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "moc_fild19.gat",105,99;	close;
+		Larc:	if(Zeny<800) goto NoGold;	set Zeny,0-800;		warp "pay_arche.gat",45,132;	close;
+		Lbib:	if(Zeny<900) goto NoGold;	set Zeny,0-900;		warp "iz_dun00.gat",168,168;	close;
+		Ltre:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alb2trea.gat",91,63;	close;
+		Lalb:	if(Zeny<1000) goto NoGold;	set Zeny,0-1000;	warp "alberta.gat",115,57;	close;
+		Lcan:	close;
+Lcart:
+	mes "not available yet...use !option command for this";
+	cutin "kafra_02",255;	close;
+NoGold:
+	mes "[Kafra]";
+	mes "Sorry, but you don't have enought Zeny's to Teleport to this place. Come back later.";
+	close;
+close;	}
+
+//XMAS
+xmas.gat,146,136,3	script	Kafra	115,{
+cutin "kafra_03",2;
+mes "[Kafra]";
+mes "Welcome to Kafra Corp.We will stay with you wherever you go.";
+next;
+menu "Save",Lsave,"Use Storage",Lstorage,"Use Teleport Service",Lteleport,"Rent a Cart",Lcart;
+Lsave:
+save "xmas.gat",148,135;
+mes "Thank you come again!";
+cutin "kafra_02",255;	close;
+Lstorage:
+mes "not available yet...";
+cutin "kafra_02",255;	close;
+Lteleport:
+mes "not available yet...use !go 0-7 command instead";
+cutin "kafra_02",255;	close;
+Lcart:
+mes "not available yet...use !option command for this";
+cutin "kafra_02",255;	close;
+close;	}
