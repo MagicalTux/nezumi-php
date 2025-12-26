@@ -96,7 +96,7 @@ Key packet examples:
 ## Technical Implementation
 
 ### Daemon Model
-- Event-driven architecture with 100ms polling loop
+- Event-driven architecture using `socket_select()` with 5 second timeout
 - Main loop: `net_idle()` → `db_check()` → `net_check()`
 - Automatic database reconnection with exponential backoff
 - Dynamic module loading system
